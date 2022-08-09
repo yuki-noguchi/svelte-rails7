@@ -1,9 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<%= content_tag :div, "", id: "blogs-show" %>
+<%= content_tag :div, "", id: "blogs-show", data: {title: @blog.title, article: @blog.article}%>
 <%= vite_typescript_tag 'blogs-show'  %>
 
-<%= render @blog %>
+<%
+=begin%>
+ <%= render @blog %> 
+<%
+=end%>
 
 <div>
   <%= link_to "Edit this blog", edit_blog_path(@blog) %> |

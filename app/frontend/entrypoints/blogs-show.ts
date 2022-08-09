@@ -1,5 +1,13 @@
 import BlogsShow from "../components/BlogsShow.svelte";
 
+const target = document.getElementById("blogs-show");
+
 new BlogsShow({
-  target: document.getElementById("blogs-show"),
+  target: target,
+  props: {
+    blog: {
+      title: target.dataset["title"],
+      article: target.dataset["article"],
+    },
+  },
 });
